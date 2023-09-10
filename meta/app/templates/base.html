@@ -1,0 +1,36 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    PRODUCTS
+{% endblock%}
+
+    {% block content %}
+        <div class="container">
+            
+            <div class="row" >
+            {% for x in mymembers%}
+<!--        
+                <div class="col-3" style="float: left;" >
+                    
+                        <img width="100%" height="75%" style="margin-top: 5px;" src="/static/images/{{x.image}}"><span></span>
+                        <a href="/details/{{x.id}}"> {{ x.id }}   {{ x.title }}   {{ x.brand }} ₹{{x.price}}</a> 
+             
+                </div>    -->
+                <div class="col-lg-3 "><a href="/details/{{x.id}}">
+                    <img width="100%" height="67%" style="margin-top: 5px;" src="/static/images/{{x.image}}"><span></span>
+                    <div class="box-element product"></a>
+                       <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                        <a class="btn btn-outline-success" href="#">View</a>
+                        <hr>
+                        <div style="margin: 0px;">
+                        <h6 style="display: inline-block; "> Price :</h6>
+                        <h6 style="float: right;"> ₹{{x.price}}</h6>
+                        </div>
+        
+                    </div>
+                </div>
+           
+            {% endfor %}
+            </div>
+        </div>
+    {% endblock %}
