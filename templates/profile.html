@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile</h1>
+    
+    <p>Welcome, {{ customer.full_name }}!</p>
+    
+    <!-- Display user profile data here -->
+    <ul>
+        <li><strong>Full Name:</strong> {{ customer.full_name }}</li>
+        <li><strong>Phone Number:</strong> {{ customer.phone_number }}</li>
+        <li><strong>Address:</strong> {{ customer.address }}</li>
+        <!-- Add more profile fields as needed -->
+    </ul>
+    
+    <a href="{% url 'product' %}">Home</a>  <!-- Link to log out the user -->
+</body>
+</html>
